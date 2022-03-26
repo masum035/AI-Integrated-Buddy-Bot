@@ -1,3 +1,10 @@
-from django.contrib import admin
+from django.core.mail import send_mail
+from django.core.paginator import Paginator
+from django.http import HttpResponseRedirect
+from django.template.loader import render_to_string
 
-# Register your models here.
+from AI_Integrated_Buddy_Bot import settings
+from .models import *
+from django.contrib.auth.models import Group
+
+# admin.site.unregister(Group)
